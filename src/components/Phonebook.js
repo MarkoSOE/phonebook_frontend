@@ -5,7 +5,7 @@ const Phonebook = ({ persons, filterName, removeEntry }) => {
 
 	return newPersonArray.map((person) => (
 		<li key={person.id}>
-			{person.name} : {person.number} : {person.id}
+			{person.name} : {person.number}
 			<button onClick={() => removeEntry(person.id)}>Delete</button>
 		</li>
 	));
