@@ -43,5 +43,5 @@
 	"devDependencies": {
 		"json-server": "^0.17.0"
 	},
-	"proxy": "https://phonebook-backend-b24s.onrender.com"
+	"proxy": "http://localhost:3001/"
 }
