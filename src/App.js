@@ -89,8 +89,10 @@ const App = () => {
 							setSuccessMessage(null);
 						}, 5000);
 					})
-					.catch(() => {
-						setErrorMessage(`Failed to add ${personObject.name}`);
+					.catch((error) => {
+						error.response.data.error
+							? setErrorMessage(`${error.response.data.error}`)
+							: setErrorMessage(`Failed to add ${personObject.name}`);
 						setTimeout(() => {
 							setErrorMessage(null);
 						}, 5000);
